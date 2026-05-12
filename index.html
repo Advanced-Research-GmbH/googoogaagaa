@@ -66,15 +66,19 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      overflow: hidden;
       transition: border-color 0.2s;
     }
 
     .channel:hover {
       border-color: #444;
+    }
+
+    .channel-header {
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .channel-info {
@@ -125,16 +129,107 @@
       font-weight: 500;
       font-size: 0.9rem;
       transition: background 0.2s;
+      flex-shrink: 0;
     }
 
     .download-btn:hover {
       background: var(--accent-hover);
     }
 
-    .download-btn.disabled {
-      background: var(--border);
+    /* Changelog */
+    .changelog {
+      border-top: 1px solid var(--border);
+    }
+
+    .changelog summary {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
       color: var(--text-muted);
-      pointer-events: none;
+      cursor: pointer;
+      user-select: none;
+      list-style: none;
+    }
+
+    .changelog summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .changelog summary::before {
+      content: "\25B6\00a0";
+      font-size: 0.6rem;
+      vertical-align: middle;
+    }
+
+    .changelog[open] summary::before {
+      content: "\25BC\00a0";
+    }
+
+    .changelog summary:hover {
+      color: var(--text);
+    }
+
+    .changelog-entries {
+      padding: 0 1.5rem 1.25rem;
+    }
+
+    .changelog-entry {
+      padding: 0.75rem 0;
+    }
+
+    .changelog-entry + .changelog-entry {
+      border-top: 1px solid var(--border);
+    }
+
+    .changelog-entry-header {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .changelog-entry-version {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      font-family: ui-monospace, monospace;
+    }
+
+    .changelog-entry-date {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .changelog-entry-notes {
+      font-size: 0.85rem;
+      color: #bbb;
+      line-height: 1.5;
+    }
+
+    .changelog-entry-notes h3 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 0.5rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .changelog-entry-notes h3:first-child {
+      margin-top: 0;
+    }
+
+    .changelog-entry-notes ul,
+    .changelog-entry-notes ol {
+      padding-left: 1.25rem;
+      margin: 0.2rem 0;
+    }
+
+    .changelog-entry-notes li {
+      margin: 0.1rem 0;
+    }
+
+    .changelog-entry-notes p {
+      margin: 0.2rem 0;
     }
 
     .requirements {
@@ -142,15 +237,6 @@
       text-align: center;
       color: var(--text-muted);
       font-size: 0.85rem;
-    }
-
-    .requirements a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .requirements a:hover {
-      text-decoration: underline;
     }
 
     footer {
@@ -179,44 +265,54 @@
     </header>
 
     <div class="channels">
-      <div class="channel">
-        <div class="channel-info">
-          <div class="channel-name">
-            180db
-            <span class="badge badge-stable">Stable</span>
-          </div>
-          
-          <div class="channel-version">Coming soon</div>
-          
-        </div>
-        
-        <span class="download-btn disabled">Download</span>
-        
-      </div>
+      
 
+      
       <div class="channel">
-        <div class="channel-info">
-          <div class="channel-name">
-            180db Beta
-            <span class="badge badge-beta">Beta</span>
+        <div class="channel-header">
+          <div class="channel-info">
+            <div class="channel-name">
+              180db Beta
+              <span class="badge badge-beta">Beta</span>
+            </div>
+            <div class="channel-version">v1.0.2</div>
           </div>
           
-          <div class="channel-version">v1.0.2</div>
+          <a href="https://github.com/Advanced-Research-GmbH/googoogaagaa/releases/download/v1.0.2-beta%2B260512.1816/180db-Beta-1.0.2.dmg" class="download-btn">Download</a>
           
         </div>
         
-        <a href="https://github.com/Advanced-Research-GmbH/googoogaagaa/releases/download/v1.0.2-beta%2B260512.1816/180db-Beta-1.0.2.dmg" class="download-btn">Download</a>
+        
+        <details class="changelog">
+          <summary>Changelog</summary>
+          <div class="changelog-entries">
+            
+            
+            <div class="changelog-entry">
+              <div class="changelog-entry-header">
+                <span class="changelog-entry-version">v1.0.2</span>
+                <span class="changelog-entry-date">2026-05-12</span>
+              </div>
+              <div class="changelog-entry-notes">Testing</div>
+            </div>
+            
+            
+          </div>
+        </details>
         
       </div>
+      
     </div>
 
+    
     <div class="requirements">
       <p>Requires macOS 14.0 or later</p>
     </div>
+    
   </div>
 
   <footer>
-    <p>&copy; 2026 <a href="https://advanced-research.net">Advanced Research</a></p>
+    <p>&copy; 2026 <a href="https://advanced-research.net">Advanced Research GmbH</a></p>
   </footer>
 </body>
 </html>
