@@ -4,5 +4,19 @@
     <title>180db Beta</title>
     <description>180db Beta Updates</description>
     <language>en</language>
+      <item>
+      <title>Version 1.0.2</title>
+      <pubDate>Tue, 12 May 2026 16:18:23 GMT</pubDate>
+      <sparkle:version>260512.1816</sparkle:version>
+      <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion>
+      <description><![CDATA[Testing]]></description>
+      <enclosure
+        url="https://github.com/Advanced-Research-GmbH/googoogaagaa/releases/download/v1.0.2-beta%2B260512.1816/180db-Beta-1.0.2.dmg"
+        length="27682059"
+        type="application/octet-stream"
+        sparkle:edSignature="2iWTqqToFbh3xnkXmSnqxq8OitJ+hbQCMl9ApGWYU9tUQO53kC4e4prgQjhmrdkdpWh9IlqipWSDXGncmWMoCQ=="
+      />
+    </item>
   </channel>
 </rss>
