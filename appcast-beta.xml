@@ -5,6 +5,23 @@
         <language>en</language>
         
         <item>
+            <title>1.0.5 (2605131633)</title>
+            <pubDate>2026-05-13 14:35:05</pubDate>
+            <sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion>
+            <sparkle:version>2605131633</sparkle:version>
+            <sparkle:shortVersionString>1.0.5</sparkle:shortVersionString>
+            
+            <description><![CDATA[This is a democracy manifest]]></description>
+            
+            <enclosure
+                url="https://github.com/Advanced-Research-GmbH/googoogaagaa/releases/download/v1.0.5-beta%2B260513.1633/180db-Beta-1.0.5.dmg"
+                length="27694386"
+                type="application/octet-stream"
+                sparkle:edSignature="R/tLpowkUO5StppXfDtAczoCAQM6rKBYvuzuH8YdCHyR803co088uXc2kORg2SxZHJBSoFrqkr9Bh6aLPV8ADA=="
+            />
+        </item>
+        
+        <item>
             <title>1.0.4 (2605131629)</title>
             <pubDate>2026-05-13 14:31:16</pubDate>
             <sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion>
